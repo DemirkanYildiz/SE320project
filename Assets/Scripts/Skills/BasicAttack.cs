@@ -4,10 +4,8 @@ using UnityEngine;
 public class BasicAttack : Attack
 {
 
-    public override void Apply(GameObject enemy)
+    public override void Apply(Stats enemyStats)
     {      
-        Stats enemyStats = enemy.GetComponent<Stats>();
-        Debug.Log(enemyStats.getHp());
         enemyStats.TakeDamage(this.stats.getAttackDamage());
     }
 }

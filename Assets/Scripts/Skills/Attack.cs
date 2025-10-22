@@ -2,11 +2,9 @@ using UnityEngine;
 
 public abstract class Attack : MonoBehaviour
 {
-
-    protected Collider attackField;
-    protected Stats stats;
-    [SerializeField] protected string enemyTag;
+    [SerializeField] protected Stats stats;
     [SerializeField] protected float cooldown;
+    [SerializeField] protected GameObject attackField;
     private bool ready;
     private float currentCooldown;
 
@@ -15,10 +13,7 @@ public abstract class Attack : MonoBehaviour
         return ready;
     }
 
-    public void Awake()
-    {
-        attackField = GetComponent<Collider>();
-        stats = transform.parent.GetComponent<Stats>();
+    public void Awake() {
         currentCooldown = cooldown;
     }
 
@@ -33,25 +28,14 @@ public abstract class Attack : MonoBehaviour
     {
         currentCooldown = cooldown;
         ready = false;
-        attackField.enabled = true;
+        attackField.SetActive(true);
     }
 
     public void AttackDisable()
     {
-        attackField.enabled = false;
+        attackField.SetActive(false);
     }
 
-    public void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("triggered");
-        if (other.gameObject.CompareTag(enemyTag))
-        {
-            Debug.Log("applying...");
-            Apply(other.gameObject);
-        }
-    }
-
-    public abstract void Apply(GameObject enemy);
-
+    public abstract void Apply(Stats target);
 
 }

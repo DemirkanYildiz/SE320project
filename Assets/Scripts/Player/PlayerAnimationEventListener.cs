@@ -8,8 +8,8 @@ public class PlayerAnimationEventListener : MonoBehaviour
 
     public void Awake()
     {
-        basicAttack = transform.parent.Find("BasicAttackField").GetComponent<BasicAttack>();
-        heavyAttack = transform.parent.Find("HeavyAttackField").GetComponent<HeavyAttack>();
+        basicAttack = transform.parent.Find("BasicAttack").GetComponent<BasicAttack>();
+        heavyAttack = transform.parent.Find("HeavyAttack").GetComponent<HeavyAttack>();
     }
 
     public void BasicAttackEnable()

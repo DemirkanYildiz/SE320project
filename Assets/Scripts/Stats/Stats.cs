@@ -17,6 +17,7 @@ public class Stats : MonoBehaviour
         animator = transform.Find(visualName).GetComponent<Animator>();
     }
     
+    
     public void TakeDamage(float amount)
     {
         float damage = amount - armor;

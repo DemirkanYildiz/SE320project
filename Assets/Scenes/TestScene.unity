@@ -345,9 +345,9 @@ GameObject:
   m_Component:
   - component: {fileID: 306820365}
   - component: {fileID: 306820367}
-  - component: {fileID: 306820366}
+  - component: {fileID: 306820368}
   m_Layer: 8
-  m_Name: HeavyAttackField
+  m_Name: AttackField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -361,27 +361,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306820364}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.78, z: 0.59}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.78, z: 0.5899999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8208659537718572082}
+  m_Father: {fileID: 2129266840}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &306820366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 306820364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7c2f70b4e726fb49b510b4850dd3122, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyTag: Enemy
-  cooldown: 5
 --- !u!65 &306820367
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -403,6 +389,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.3, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &306820368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306820364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41aa0d209f6fe2c4ab538d06d8d918e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 2129266841}
+  enemyTag: Enemy
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,7 +542,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHp: 100
-  hp: 0
+  hp: 100
   armor: 0
   cooldownReduction: 1
   attackDamage: 1
@@ -641,9 +641,9 @@ GameObject:
   m_Component:
   - component: {fileID: 947687226}
   - component: {fileID: 947687228}
-  - component: {fileID: 947687227}
+  - component: {fileID: 947687229}
   m_Layer: 8
-  m_Name: BasicAttackField
+  m_Name: AttackField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -657,27 +657,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 947687225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8208659537718572082}
+  m_Father: {fileID: 1487190667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &947687227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 947687225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73b1573bade40b14cb4e9ea2feb36664, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enemyTag: Enemy
-  cooldown: 1
 --- !u!65 &947687228
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -699,6 +685,68 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 0.2, z: 1}
   m_Center: {x: 0, y: 1, z: 0.3}
+--- !u!114 &947687229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947687225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41aa0d209f6fe2c4ab538d06d8d918e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: {fileID: 1487190668}
+  enemyTag: Enemy
+--- !u!1 &1487190666
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1487190667}
+  - component: {fileID: 1487190668}
+  m_Layer: 8
+  m_Name: BasicAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1487190667
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487190666}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 947687226}
+  m_Father: {fileID: 8208659537718572082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1487190668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487190666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73b1573bade40b14cb4e9ea2feb36664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 8208659537718572080}
+  cooldown: 1
+  attackField: {fileID: 947687225}
 --- !u!1001 &1602842880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -825,6 +873,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2129266839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2129266840}
+  - component: {fileID: 2129266841}
+  m_Layer: 8
+  m_Name: HeavyAttack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2129266840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129266839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 306820365}
+  m_Father: {fileID: 8208659537718572082}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2129266841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129266839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7c2f70b4e726fb49b510b4850dd3122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stats: {fileID: 8208659537718572080}
+  cooldown: 5
+  attackField: {fileID: 306820364}
 --- !u!1001 &8208659537718572077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,10 +1039,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6315545908248453711, guid: d681435d3b595364c820c112efd2422f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 947687226}
+      addedObject: {fileID: 1487190667}
     - targetCorrespondingSourceObject: {fileID: 6315545908248453711, guid: d681435d3b595364c820c112efd2422f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 306820365}
+      addedObject: {fileID: 2129266840}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2522406818005998021, guid: d681435d3b595364c820c112efd2422f, type: 3}
       insertIndex: -1
