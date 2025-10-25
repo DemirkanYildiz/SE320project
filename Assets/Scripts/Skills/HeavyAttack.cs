@@ -4,10 +4,9 @@ using UnityEngine;
 public class HeavyAttack : Attack
 {
 
-    public override void Apply(GameObject enemy)
+    public override void Apply(Stats enemyStats)
     {
-        Stats enemyStats = enemy.GetComponent<Stats>();
-        enemyStats.TakeDamage(this.stats.getAttackDamage() * 1.25f + this.stats.getArmor() * 0.25f);
+        enemyStats.TakeDamage(stats.getAttackDamage() * 1.25f + stats.getArmor() * 0.25f);
     }
 
 }

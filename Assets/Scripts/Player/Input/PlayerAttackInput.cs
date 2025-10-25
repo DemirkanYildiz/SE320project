@@ -13,8 +13,8 @@ public class PlayerAttackInput : MonoBehaviour
 
     private void Awake()
     {
-        heavyAttack = transform.Find("HeavyAttackField").GetComponent<HeavyAttack>();
-        basicAttack = transform.Find("BasicAttackField").GetComponent<BasicAttack>();
+        heavyAttack = transform.Find("HeavyAttack").GetComponent<HeavyAttack>();
+        basicAttack = transform.Find("BasicAttack").GetComponent<BasicAttack>();
         animator = transform.Find("PlayerVisuals").GetComponent<Animator>();
     }
 
