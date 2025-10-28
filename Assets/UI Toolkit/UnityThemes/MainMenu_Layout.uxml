@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu_Styles.uss?fileID=7433441132597879392&amp;guid=61d536131fd1ddf4492f35ed86b44177&amp;type=3#MainMenu_Styles" />
+    <ui:VisualElement name="mainContainer" class="MainContainer" style="flex-grow: 1;">
+        <ui:VisualElement name="mainMenuLabel" class="mainMenuPanel" style="flex-grow: 1; width: 996px; justify-content: flex-start; align-items: center; height: auto; flex-direction: column; align-self: flex-start;">
+            <ui:Label text="The Lord Of The Dungeons" name="titleLabel" style="-unity-text-align: middle-center; height: 203px; width: 349px; white-space: pre-wrap; font-size: 36px; padding-bottom: 100px; color: rgb(139, 0, 0);" />
+            <ui:Button text="Play Game" name="playButton" style="margin-bottom: 20px; -unity-font-style: normal; background-color: rgb(139, 0, 0);" />
+            <ui:Button text="Options" name="optionsButton" style="margin-bottom: 20px; background-color: rgb(139, 0, 0);" />
+            <ui:Button text="Exit Game" name="exitButton" style="background-color: rgb(139, 0, 0);" />
+        </ui:VisualElement>
+        <ui:VisualElement name="dungeonSelectPanel" class="dungeonSelectPanel" style="flex-grow: 1; width: 1156px; justify-content: flex-start; align-self: auto; align-items: center; flex-direction: row;" />
+        <ui:VisualElement style="flex-grow: 1; width: 1236px; justify-content: flex-end; align-self: flex-start;" />
+    </ui:VisualElement>
+</ui:UXML>

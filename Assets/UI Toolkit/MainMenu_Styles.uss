@@ -1,0 +1,66 @@
+/* Ana kapsayýcý: Tüm ekraný kaplasýn ve içindekileri ortalasýn */
+/* BU BÝR 'NAME' DEÐÝL, 'STYLE CLASS'TIR. */
+/* UI Builder'da en dýþtaki VisualElement'a 'main-container' Sýnýfýný verdiðinizden emin olun. */
+#mainContainer {
+    width: 100%;
+    height: 100%;
+    
+    justify-content: center;
+    align-items: center;
+
+    /* HATALI YOLU ('Assets/Ui/Backgrounds/...') BU DOÐRU YOL ÝLE DEÐÝÞTÝRÝN: */
+    background-image: url('project:/Assets/Ui/Backgrounds/MainMenuBackgroundPhoto.png'); 
+    
+    background-size: cover;
+    background-position: center;
+}
+
+/* Tüm paneller için temel stil */
+/* # (diyez) iþareti UXML'deki 'Name' ile eþleþir */
+/* Ýsimler sizin kullandýðýnýz 'camelCase' formatýna güncellendi */
+#mainMenuPanel, #optionsPanel, #dungeonPanel {
+    /* Ýçindekileri ortala (Bu sizde zaten çalýþýyor) */
+    align-items: center;
+    justify-content: center;
+
+    /* --- YENÝ EKLENEN KURALLAR --- */
+    
+    /* 1. Paneli "Kutu" yap: Sabit bir geniþlik verelim */
+    width: 400px; 
+    
+    /* 2. Arka plan rengi verelim (Görseldeki gri gibi) */
+    background-color: rgba(40, 40, 40, 0.8); /* Koyu yarý saydam */
+    
+    /* 3. Kenarlarý yuvarlat (Daha þýk durur) */
+    border-radius: 15px;
+    
+    /* 4. Ýç boþluk: Baþlýk panelin tepesine, butonlar dibine yapýþmasýn */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* BAÞLANGIÇTA DÝÐER PANELLERÝ GÝZLEME */
+#optionsPanel, 
+#dungeonPanel {
+    display: none; /* Bu, elemaný tamamen gizler ve yer kaplamaz */
+}
+
+/* Ana Menü Elemanlarý */
+
+#titleLabel { /* 'title-label' yerine 'titleLabel' olarak güncellendi */
+    font-size: 48px;
+    -unity-font-style: bold;
+    color: rgb(220, 220, 220); /* Hafif kýrýk beyaz */
+    margin-bottom: 30px; /* Baþlýk ile butonlar arasýna boþluk */
+}
+
+/* Butonlar için ortak stil */
+#playButton, /* 'play-button' yerine 'playButton' olarak güncellendi */
+#optionsButton, /* 'options-button' yerine 'optionsButton' olarak güncellendi */
+#exitButton { /* 'exit-button' yerine 'exitButton' olarak güncellendi */
+    width: 250px;
+    height: 50px;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
