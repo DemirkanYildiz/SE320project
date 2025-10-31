@@ -36,6 +36,11 @@ public class Stats : MonoBehaviour
         return attackDamage;
     }
 
+    public float getMaxHp()
+    {
+        return maxHp;
+    }
+
     public float getArmor()
     {
         return armor;

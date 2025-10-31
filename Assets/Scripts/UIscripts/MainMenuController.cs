@@ -1,10 +1,11 @@
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UIElements;
-// using UnityEngine.SceneManagement; // Zindana girmek için bu satýr ileride gerekecek
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Kök eleman
+    // Kï¿½k eleman
     private VisualElement root;
 
     // Panellerimiz
@@ -12,12 +13,12 @@ public class MainMenuController : MonoBehaviour
     private VisualElement optionsPanel;
     private VisualElement dungeonSelectPanel;
 
-    // Ana Menü Butonlarý
+    // Ana Menï¿½ Butonlarï¿½
     private Button playButton;
     private Button optionsButton;
     private Button exitButton;
 
-    // Zindan Seçim Paneli Elemanlarý
+    // Zindan Seï¿½im Paneli Elemanlarï¿½
     private Button dungeon1Button;
     private Button dungeon2Button;
     private Button dungeonBackButton;
@@ -27,13 +28,19 @@ public class MainMenuController : MonoBehaviour
     private Label statsDamage;
     private Label statsCooldown;
 
-    // --- GÜNCELLEME 1: Deðiþkeni buraya taþýdýk ---
-    private Button optionsBackButton; // YENÝ EKLENDÝ (tanýmlama)
+    // --- Gï¿½NCELLEME 1: Deï¿½iï¿½keni buraya taï¿½ï¿½dï¿½k ---
+    private Button optionsBackButton; // YENï¿½ EKLENDï¿½ (tanï¿½mlama)
+    
+    // player stats
+    [SerializeField] private Stats playerStats;
+
+    //0->testScene 1-> dungeon1
+    private int sceneId;
 
 
     void OnEnable()
     {
-        // 1. Kök elemaný çek
+        // 1. Kï¿½k elemanï¿½ ï¿½ek
         root = GetComponent<UIDocument>().rootVisualElement;
 
         // 2. Panelleri bul
@@ -41,7 +48,7 @@ public class MainMenuController : MonoBehaviour
         optionsPanel = root.Q<VisualElement>("options-panel");
         dungeonSelectPanel = root.Q<VisualElement>("dungeon-select-panel");
 
-        // 3. Ana Menü Butonlarýný bul ve baðla
+        // 3. Ana Menï¿½ Butonlarï¿½nï¿½ bul ve baï¿½la
         playButton = root.Q<Button>("play-button");
         optionsButton = root.Q<Button>("options-button");
         exitButton = root.Q<Button>("exit-button");
@@ -53,7 +60,7 @@ public class MainMenuController : MonoBehaviour
             Application.Quit();
         };
 
-        // 4. Zindan Paneli Elemanlarýný bul ve baðla
+        // 4. Zindan Paneli Elemanlarï¿½nï¿½ bul ve baï¿½la
         dungeon1Button = root.Q<Button>("dungeon-1-button");
         dungeon2Button = root.Q<Button>("dungeon-2-button");
         dungeonBackButton = root.Q<Button>("dungeon-back-button");
@@ -65,34 +72,42 @@ public class MainMenuController : MonoBehaviour
 
         dungeonBackButton.clicked += () => SwitchPanel(dungeonSelectPanel, mainMenuPanel);
         dungeonEnterButton.clicked += OnEnterDungeon;
-        dungeon1Button.clicked += () => ShowDungeonStats(1);
-        dungeon2Button.clicked += () => ShowDungeonStats(2);
+        dungeon1Button.clicked += () => SelectScene(1);
+        //when dungeon 2 finished open this.
+        //dungeon2Button.clicked += () => SelectScene(2);
 
-        // --- GÜNCELLEME 2: Options 'Back' Butonunu burada bulup baðlýyoruz ---
+        // --- Gï¿½NCELLEME 2: Options 'Back' Butonunu burada bulup baï¿½lï¿½yoruz ---
 
         // Options 'Back' butonunu bul
         optionsBackButton = root.Q<Button>("options-back-button");
 
-        // 'Back' butonu: Options panelini gizle, Ana menüyü göster
+        // 'Back' butonu: Options panelini gizle, Ana menï¿½yï¿½ gï¿½ster
         optionsBackButton.clicked += () => SwitchPanel(optionsPanel, mainMenuPanel);
 
         // --- Bitti ---
 
-        // Baþlangýçta varsayýlan istatistikleri göster
-        ShowDungeonStats(1);
+        // Baï¿½langï¿½ï¿½ta varsayï¿½lan istatistikleri gï¿½ster
+        ShowPlayerStats(1);
     }
 
-    // Ýki panel arasýnda geçiþ yapmak için yardýmcý bir fonksiyon
+    // ï¿½ki panel arasï¿½nda geï¿½iï¿½ yapmak iï¿½in yardï¿½mcï¿½ bir fonksiyon
     void SwitchPanel(VisualElement panelToHide, VisualElement panelToShow)
     {
         panelToHide.style.display = DisplayStyle.None;
         panelToShow.style.display = DisplayStyle.Flex;
     }
 
-    // Seçilen zindana göre istatistikleri güncelleyen fonksiyon
-    void ShowDungeonStats(int dungeonID)
+    void SelectScene(int id)
     {
-        if (dungeonID == 1)
+        this.sceneId = id;
+    }
+    
+    
+    // Seï¿½ilen zindana gï¿½re istatistikleri gï¿½ncelleyen fonksiyon
+    void ShowPlayerStats(int dungeonID)
+    {
+        //show player stats here.
+        /*if (dungeonID == 1)
         {
             statsHp.text = "Max Hp: 100";
             statsArmor.text = "Armor: 5";
@@ -109,11 +124,17 @@ public class MainMenuController : MonoBehaviour
             statsCooldown.text = "Cooldown reduction: 10%";
             dungeon1Button.RemoveFromClassList("button-selected");
             dungeon2Button.AddToClassList("button-selected");
-        }
+        }*/
+        statsHp.text = "Max Hp: "+playerStats.getMaxHp();
+        statsArmor.text = "Armor: "+playerStats.getArmor();
+        statsDamage.text = "Attack damage: "+playerStats.getAttackDamage();
+        statsCooldown.text = "Cooldown reduction: "+playerStats.getCooldownReduction();
     }
 
-    void OnEnterDungeon()
+    public void OnEnterDungeon()
     {
-        Debug.Log("Entering dungeon... (Scene loading logic goes here)");
+        SceneManager.LoadScene(sceneId);
+        gameObject.SetActive(false);
     }
+    
 }
