@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/styles/PlayAgainMenu_Styles.uss?fileID=7433441132597879392&amp;guid=2248102b34ddf2041ad3b7b11e2ee82e&amp;type=3#PlayAgainMenu_Styles" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: auto;">
+        <ui:Label text="Label" />
+        <ui:Button text="Button" class="Button" />
+    </ui:VisualElement>
+</ui:UXML>

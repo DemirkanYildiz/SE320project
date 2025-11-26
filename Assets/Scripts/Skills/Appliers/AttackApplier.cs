@@ -8,9 +8,8 @@ public class AttackApplier : MonoBehaviour
     
     public void OnTriggerEnter(Collider other)
     {
-        
+        Debug.Log(other.tag);
         Stats enemyStats = other.gameObject.GetComponent<Stats>();
-        Debug.Log("trigger enter");
         if (other.gameObject.CompareTag(enemyTag) && enemyStats != null)
         {
             attack.Apply(enemyStats);

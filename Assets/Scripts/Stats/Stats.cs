@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Stats : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class Stats : MonoBehaviour
     public void Die()
     {
         animator.SetBool("die", true);
+        Destroy(gameObject);
+        if (gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     public float getAttackDamage()

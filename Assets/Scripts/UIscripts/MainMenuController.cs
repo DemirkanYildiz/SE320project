@@ -134,7 +134,6 @@ public class MainMenuController : MonoBehaviour
     public void OnEnterDungeon()
     {
         SceneManager.LoadScene(sceneId);
-        gameObject.SetActive(false);
     }
     
 }

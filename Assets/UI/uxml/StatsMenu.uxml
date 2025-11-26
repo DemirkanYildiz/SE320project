@@ -1,0 +1,9 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/styles/Stats_Styles.uss?fileID=7433441132597879392&amp;guid=56ba799a6ed19c54baf52e5a10adfd5b&amp;type=3#Stats_Styles" />
+    <ui:VisualElement style="flex-grow: 1; align-self: flex-end; width: 500px; height: 500px; align-items: flex-end; justify-content: flex-start;">
+        <ui:Label text="Max HP:" name="MaxHP" class="Label" style="width: 500px; height: 50px;" />
+        <ui:Label text="Armor:" name="Armor" class="Label" style="width: 500px; height: 50px;" />
+        <ui:Label text="Attack Damage:" name="AttackDamage" class="Label" style="width: 500px; height: 50px;" />
+        <ui:Label text="Cooldown Reduction:" name="CooldownReduction" class="Label" />
+    </ui:VisualElement>
+</ui:UXML>

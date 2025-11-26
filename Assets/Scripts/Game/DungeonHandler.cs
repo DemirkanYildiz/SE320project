@@ -9,7 +9,6 @@ public class DungeonHandler : MonoBehaviour
 
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private Transform playerStartPoint;
-    //[SerializeField] private List<EnemySpawner> enemySpawners;
 
     public void Awake()
     {
@@ -18,16 +17,7 @@ public class DungeonHandler : MonoBehaviour
 
     public void Start()
     {
-        LoadDungeon();
-    }
-
-    public void LoadDungeon()
-    {
         Instantiate(playerPrefab, playerStartPoint);
-        /*foreach (EnemySpawner enemySpawner in enemySpawners)
-        {
-            Debug.Log("enemy spawned");
-            enemySpawner.Spawn();
-        }*/
     }
+    
 }

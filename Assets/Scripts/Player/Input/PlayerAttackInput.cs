@@ -29,7 +29,7 @@ public class PlayerAttackInput : MonoBehaviour
     private void OnDisable()
     {
         basicAttackInput.action.performed -= BasicAttackPerform;
-        heavyAttackInput.action.canceled -= HeavyAttackPerform;
+        heavyAttackInput.action.performed -= HeavyAttackPerform;
         basicAttackInput.action.Disable();
         heavyAttackInput.action.Disable();
     }

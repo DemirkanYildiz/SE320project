@@ -1,7 +1,7 @@
 using UnityEngine;
 
 // must attached to the same game object with the animator component.
-public class PlayerAnimationEventListener : MonoBehaviour
+public class AnimationEventListener : MonoBehaviour
 {
     private BasicAttack basicAttack;
     private HeavyAttack heavyAttack;
