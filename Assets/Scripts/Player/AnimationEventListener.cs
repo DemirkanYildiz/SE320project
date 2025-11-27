@@ -5,6 +5,7 @@ public class AnimationEventListener : MonoBehaviour
 {
     private BasicAttack basicAttack;
     private HeavyAttack heavyAttack;
+    [SerializeField] private GameObject destroy;
 
     public void Awake()
     {
@@ -30,6 +31,12 @@ public class AnimationEventListener : MonoBehaviour
     public void HeavyAttackDisable()
     {
         heavyAttack.AttackDisable();
+    }
+
+    public void DestroyObject()
+    {
+        Debug.Log("OnDestroy");
+        Destroy(destroy);
     }
 
 

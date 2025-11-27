@@ -87,7 +87,7 @@ public class MainMenuController : MonoBehaviour
         // --- Bitti ---
 
         // Ba�lang��ta varsay�lan istatistikleri g�ster
-        ShowPlayerStats(1);
+        ShowPlayerStats();
     }
 
     // �ki panel aras�nda ge�i� yapmak i�in yard�mc� bir fonksiyon
@@ -104,7 +104,7 @@ public class MainMenuController : MonoBehaviour
     
     
     // Se�ilen zindana g�re istatistikleri g�ncelleyen fonksiyon
-    void ShowPlayerStats(int dungeonID)
+    void ShowPlayerStats()
     {
         //show player stats here.
         /*if (dungeonID == 1)

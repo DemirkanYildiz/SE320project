@@ -28,6 +28,7 @@ public class StatsVisual : MonoBehaviour
         Armor = root.Q<Label>("Armor");
         AD = root.Q<Label>("AttackDamage");
         CDR = root.Q<Label>("CooldownReduction");
+        root.style.display = DisplayStyle.None;
     }
 
     private void OnEnable()

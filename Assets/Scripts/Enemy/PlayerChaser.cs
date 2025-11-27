@@ -11,7 +11,8 @@ public class PlayerChaser : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (!other.CompareTag("Player")) return;
+        if (animator.GetBool("die")) {return;} 
+        if (!other.CompareTag("Player")) {return;}
 
         Vector3 toPlayer = other.transform.position - transform.position;
         float distance = toPlayer.magnitude;

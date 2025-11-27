@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,7 +31,10 @@ public class Stats : MonoBehaviour
     public void Die()
     {
         animator.SetBool("die", true);
-        Destroy(gameObject);
+    }
+
+    public void OnDestroy()
+    {
         if (gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(0);
