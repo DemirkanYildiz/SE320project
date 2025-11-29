@@ -33,7 +33,7 @@ public class GameHUDController : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("GameHUDController: 'Player' tag'ine sahip nesne bulunamadý!");
+            Debug.LogWarning("GameHUDController: 'Player' tag'ine sahip nesne bulunamadï¿½!");
         }
     }
 
