@@ -5,20 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // K�k eleman
     private VisualElement root;
-
-    // Panellerimiz
+    
     private VisualElement mainMenuPanel;
     private VisualElement optionsPanel;
     private VisualElement dungeonSelectPanel;
-
-    // Ana Men� Butonlar�
+    
     private Button playButton;
     private Button optionsButton;
     private Button exitButton;
-
-    // Zindan Se�im Paneli Elemanlar�
+    
     private Button dungeon1Button;
     private Button dungeon2Button;
     private Button dungeonBackButton;
@@ -27,9 +23,8 @@ public class MainMenuController : MonoBehaviour
     private Label statsArmor;
     private Label statsDamage;
     private Label statsCooldown;
-
-    // --- G�NCELLEME 1: De�i�keni buraya ta��d�k ---
-    private Button optionsBackButton; // YEN� EKLEND� (tan�mlama)
+    
+    private Button optionsBackButton;
     
     // player stats
     [SerializeField] private Stats playerStats;
@@ -40,15 +35,12 @@ public class MainMenuController : MonoBehaviour
 
     void OnEnable()
     {
-        // 1. K�k eleman� �ek
         root = GetComponent<UIDocument>().rootVisualElement;
-
-        // 2. Panelleri bul
+        
         mainMenuPanel = root.Q<VisualElement>("main-menu-panel");
         optionsPanel = root.Q<VisualElement>("options-panel");
         dungeonSelectPanel = root.Q<VisualElement>("dungeon-select-panel");
-
-        // 3. Ana Men� Butonlar�n� bul ve ba�la
+        
         playButton = root.Q<Button>("play-button");
         optionsButton = root.Q<Button>("options-button");
         exitButton = root.Q<Button>("exit-button");
@@ -59,8 +51,7 @@ public class MainMenuController : MonoBehaviour
             Debug.Log("Exiting game...");
             Application.Quit();
         };
-
-        // 4. Zindan Paneli Elemanlar�n� bul ve ba�la
+        
         dungeon1Button = root.Q<Button>("dungeon-1-button");
         dungeon2Button = root.Q<Button>("dungeon-2-button");
         dungeonBackButton = root.Q<Button>("dungeon-back-button");
@@ -75,22 +66,14 @@ public class MainMenuController : MonoBehaviour
         dungeon1Button.clicked += () => SelectScene(1);
         //when dungeon 2 finished open this.
         //dungeon2Button.clicked += () => SelectScene(2);
-
-        // --- G�NCELLEME 2: Options 'Back' Butonunu burada bulup ba�l�yoruz ---
-
-        // Options 'Back' butonunu bul
+        
         optionsBackButton = root.Q<Button>("options-back-button");
-
-        // 'Back' butonu: Options panelini gizle, Ana men�y� g�ster
+        
         optionsBackButton.clicked += () => SwitchPanel(optionsPanel, mainMenuPanel);
-
-        // --- Bitti ---
-
-        // Ba�lang��ta varsay�lan istatistikleri g�ster
+        
         ShowPlayerStats();
     }
-
-    // �ki panel aras�nda ge�i� yapmak i�in yard�mc� bir fonksiyon
+    
     void SwitchPanel(VisualElement panelToHide, VisualElement panelToShow)
     {
         panelToHide.style.display = DisplayStyle.None;
@@ -102,8 +85,6 @@ public class MainMenuController : MonoBehaviour
         this.sceneId = id;
     }
     
-    
-    // Se�ilen zindana g�re istatistikleri g�ncelleyen fonksiyon
     void ShowPlayerStats()
     {
         //show player stats here.
