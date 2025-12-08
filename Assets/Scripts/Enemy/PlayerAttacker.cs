@@ -10,7 +10,7 @@ public class PlayerAttacker : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            animator.SetBool("attack", true);
+            animator.SetTrigger("attack");
         }
     }
     

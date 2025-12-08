@@ -8,13 +8,11 @@ public class PlayerChaser : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform enemyVisualTransform;
-    [SerializeField] private float rotationSpeed = 10;
+    [SerializeField] private float rotationSpeed = 1;
 
     public void OnTriggerStay(Collider other)
     {
         if (animator.GetBool("die")) {return;}
-
-        if (animator.GetBool("attack")) {return;}
 
         if (!other.CompareTag("Player")) {return;}
         
@@ -23,12 +21,13 @@ public class PlayerChaser : MonoBehaviour
 
         bool shouldRun = distance >= 2f;
         animator.SetBool("running", shouldRun);
-
+        
         if (shouldRun)
         {
             Vector3 direction = toPlayer.normalized;
             controller.SimpleMove(direction * speed);
         }
+        
         toPlayer.y = 0;
         Quaternion targetRotation = Quaternion.LookRotation(toPlayer);
         enemyVisualTransform.rotation = Quaternion.Slerp(enemyVisualTransform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
