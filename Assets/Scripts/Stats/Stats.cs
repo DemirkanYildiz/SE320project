@@ -35,15 +35,18 @@ public class Stats : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        float damage = amount - armor;
-        if (damage < 0) { damage = 0; }
-
+        float percentageDamageReduction = armor / (armor + 50);
+        float damage = amount * (1-percentageDamageReduction);
         hp -= damage;
-
-        
-        OnHealthChanged?.Invoke(hp, maxHp);
-
-        if (hp <= 0) { Die(); }
+        if (hp <= 0) {
+            hp = 0;
+            OnHealthChanged?.Invoke(hp, maxHp);
+            Die();
+        }
+        else
+        {
+            OnHealthChanged?.Invoke(hp, maxHp);
+        }
     }
 
     public void Die()
