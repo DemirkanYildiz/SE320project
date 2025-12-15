@@ -58,15 +58,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Heal",
-                    "type": "Button",
-                    "id": "ccaa769c-95e6-467f-9649-06d65aad6cb1",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -256,17 +247,6 @@
                     "action": "HeavyAttack",
                     "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5b918c0b-331e-422e-b1f1-74eeabc6daff",
-                    "path": "<Keyboard>/1",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Heal",
-                    "isComposite": false,
-                    "isPartOfComposite": false
                 }
             ]
         },
@@ -282,6 +262,42 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Increment Max HP",
+                    "type": "Button",
+                    "id": "420108e6-6b2b-4b45-abee-ecd12c4a2d97",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Increment Armor",
+                    "type": "Button",
+                    "id": "88ebd048-fd20-42c4-969b-c96dae64ed0d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Increment AD",
+                    "type": "Button",
+                    "id": "43523e24-ccac-4cd5-8fe0-e99a55f5410e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Increment CDR",
+                    "type": "Button",
+                    "id": "34424b20-84b8-4d32-a069-088dc1a7ef47",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -293,6 +309,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Open Stats",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "57da755d-a574-4cae-937a-b085c3f4090f",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Increment Max HP",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "df71bc60-d5a5-4ed9-bf6d-45887869f332",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Increment Armor",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6b08c9c3-75c9-4364-bdf3-55934e925cae",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Increment AD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00b81c31-dd97-4258-92fd-90117b1f5d94",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Increment CDR",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -47,14 +47,13 @@ public class GameHUDController : MonoBehaviour
     }
 
     
-    void UpdateHealthUI(float currentHp, float maxHp)
+    public void UpdateHealthUI(float currentHp, float maxHp)
     {
         if (healthBar != null)
         {
-            
             healthBar.highValue = maxHp;
-            
             healthBar.value = currentHp;
+            healthBar.title = currentHp + "/" + maxHp;
         }
     }
 }

@@ -53,19 +53,16 @@ public class Stats : MonoBehaviour
     {
         if (animator != null) animator.SetBool("die", true);
     }
-
-    public void OnDestroy()
-    {
-        if (gameObject.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(0);
-        }
-    }
-
     
     public float getAttackDamage() { return attackDamage; }
     public float getMaxHp() { return maxHp; }
     public float getArmor() { return armor; }
     public float getCooldownReduction() { return cooldownReduction; }
+    
+    public void setAttackDamage(float ad) { this.attackDamage = ad; }
+    public void setMaxHp(float maxHp) { this.maxHp = maxHp; }
+    public void setArmor(float armor) { this.armor = armor; }
+    public void setCooldownReduction(float cdr) { this.cooldownReduction = cdr; }
+    
     public float getHp() { return hp; }
 }
