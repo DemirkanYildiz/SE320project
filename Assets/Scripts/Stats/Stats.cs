@@ -63,6 +63,12 @@ public class Stats : MonoBehaviour
     public void setMaxHp(float maxHp) { this.maxHp = maxHp; }
     public void setArmor(float armor) { this.armor = armor; }
     public void setCooldownReduction(float cdr) { this.cooldownReduction = cdr; }
+
+    public void setHp(float health)
+    {
+        this.hp = health;
+        OnHealthChanged?.Invoke(this.hp, maxHp);
+    }
     
     public float getHp() { return hp; }
 }

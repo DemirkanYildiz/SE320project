@@ -560,7 +560,7 @@ MonoBehaviour:
   hp: 100
   armor: 0
   cooldownReduction: 1
-  attackDamage: 1
+  attackDamage: 6
   visualName: EnemyVisuals
 --- !u!143 &252157782024915987
 CharacterController:
@@ -600,7 +600,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 5
-  playerScore: {fileID: 8208235498041189126, guid: 0341d1e3f97ce024e966b38b4132ca8b, type: 3}
 --- !u!1 &8310756176844514311
 GameObject:
   m_ObjectHideFlags: 0

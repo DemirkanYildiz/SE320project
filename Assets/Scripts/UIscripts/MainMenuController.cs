@@ -27,7 +27,6 @@ public class MainMenuController : MonoBehaviour
 
     void OnEnable()
     {
-        // DÜZELTME BURADA YAPILDI: Baþýna 'UnityEngine.' eklendi
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
 
@@ -46,7 +45,7 @@ public class MainMenuController : MonoBehaviour
         playButton.clicked += () => SwitchPanel(mainMenuPanel, dungeonSelectPanel);
         optionsButton.clicked += () => SwitchPanel(mainMenuPanel, optionsPanel);
         exitButton.clicked += () => { Application.Quit(); };
-
+        
         dungeon1Button = root.Q<Button>("dungeon-1-button");
         dungeon2Button = root.Q<Button>("dungeon-2-button");
         dungeonBackButton = root.Q<Button>("dungeon-back-button");

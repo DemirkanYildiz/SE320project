@@ -104,7 +104,7 @@ MonoBehaviour:
   hp: 100
   armor: 10
   cooldownReduction: 2
-  attackDamage: 5
+  attackDamage: 10
   visualName: EnemyVisuals
 --- !u!143 &3673145300833867273
 CharacterController:
