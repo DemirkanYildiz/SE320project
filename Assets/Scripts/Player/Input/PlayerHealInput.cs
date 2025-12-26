@@ -6,12 +6,32 @@ public class PlayerHealInput : MonoBehaviour
     [SerializeField] private Stats playerStats;
     [SerializeField] private InputActionReference playerHeal;
     [SerializeField] private float cooldown = 20;
-
+    [SerializeField] private SkillsUI skillsUI;
+    private int prevFloatingDigit = -1;
+    
     public void Update()
     {
         if (cooldown > 0)
         {
+            int currentDigit = Mathf.FloorToInt(cooldown * 10) % 10;
+
+            if (prevFloatingDigit == -1)
+            {
+                prevFloatingDigit = currentDigit;
+                return;
+            }
+
+            if (currentDigit != prevFloatingDigit)
+            {
+                skillsUI.updateCooldownE(cooldown.ToString("#.0"));
+                prevFloatingDigit = currentDigit;
+            }
+            
             cooldown -= Time.deltaTime * playerStats.getCooldownReduction();
+            if (cooldown <= 0)
+            {
+                skillsUI.updateCooldownE("");
+            }
         }
     }
 

@@ -71,6 +71,7 @@ MonoBehaviour:
   controller: {fileID: 252157782024915987}
   enemyVisualTransform: {fileID: 5326031357453774909}
   rotationSpeed: 100
+  enemyStats: {fileID: 4486659364794344970}
 --- !u!1 &749558607859371394
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +389,7 @@ MonoBehaviour:
   stats: {fileID: 4486659364794344970}
   cooldown: 1
   attackField: {fileID: 7394746107155086999}
+  skillsUI: {fileID: 0}
 --- !u!1 &7394746107155086999
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +506,7 @@ MonoBehaviour:
   stats: {fileID: 4486659364794344970}
   cooldown: 5
   attackField: {fileID: 753579313280098685}
+  skillsUI: {fileID: 0}
 --- !u!1 &8100131545923598001
 GameObject:
   m_ObjectHideFlags: 0

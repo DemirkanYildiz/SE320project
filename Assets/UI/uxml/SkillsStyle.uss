@@ -1,0 +1,54 @@
+:root {
+}
+
+.skill {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 2.5px;
+    margin-left: 5px;
+    margin-bottom: 2.5px;
+    margin-right: 5px;
+}
+
+.cooldown {
+    width: 50px;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    min-width: 50px;
+    max-width: 50px;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+    align-self: center;
+    align-items: center;
+    padding-left: 5px;
+    bottom: auto;
+    left: auto;
+    top: 30px;
+    right: auto;
+}
+
+.skills {
+    min-height: 322px;
+    max-height: 322px;
+    height: 322px;
+    width: 110px;
+}
+
+.name {
+    width: 70px;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+    min-width: 70px;
+    max-width: 70px;
+    align-items: flex-start;
+    top: 0;
+    position: absolute;
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
+}

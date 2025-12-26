@@ -48,6 +48,7 @@ MonoBehaviour:
   stats: {fileID: 6190812439666735331}
   cooldown: 5
   attackField: {fileID: 5244619839176152240}
+  skillsUI: {fileID: 0}
 --- !u!1 &1890609960688675863
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
   cooldownReduction: 2
   attackDamage: 10
   visualName: EnemyVisuals
+  isDead: 0
 --- !u!143 &3673145300833867273
 CharacterController:
   m_ObjectHideFlags: 0
@@ -416,6 +418,7 @@ MonoBehaviour:
   controller: {fileID: 3673145300833867273}
   enemyVisualTransform: {fileID: 3673370293539427603}
   rotationSpeed: 100
+  enemyStats: {fileID: 6190812439666735331}
 --- !u!1 &6229579049861398734
 GameObject:
   m_ObjectHideFlags: 0
@@ -599,6 +602,7 @@ MonoBehaviour:
   stats: {fileID: 6190812439666735331}
   cooldown: 1
   attackField: {fileID: 6907313750456176970}
+  skillsUI: {fileID: 0}
 --- !u!1 &9175962284910855865
 GameObject:
   m_ObjectHideFlags: 0

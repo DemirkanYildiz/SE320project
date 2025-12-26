@@ -44,7 +44,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: heavyAttack
+      name: MeeleeAttack_OneHanded
       takeName: MeeleeAttack_OneHanded
       internalID: 0
       firstFrame: 2
@@ -75,7 +75,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.63143975
+      - time: 0.3759717
         functionName: HeavyAttackDisable
         data: 
         objectReferenceParameter: {instanceID: 0}
@@ -87,7 +87,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 2
     - serializedVersion: 16
-      name: basicAttack
+      name: MeeleeAttack_OneHanded (1)
       takeName: MeeleeAttack_OneHanded
       internalID: 416870459326255563
       firstFrame: 2
@@ -118,7 +118,7 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.54808533
+      - time: 0.3381116
         functionName: BasicAttackDisable
         data: 
         objectReferenceParameter: {instanceID: 0}

@@ -9,11 +9,11 @@ public class PlayerChaser : MonoBehaviour
     [SerializeField] private CharacterController controller;
     [SerializeField] private Transform enemyVisualTransform;
     [SerializeField] private float rotationSpeed = 1;
+    [SerializeField] private Stats enemyStats;
 
     public void OnTriggerStay(Collider other)
     {
-        if (animator.GetBool("die")) {return;}
-
+        if (enemyStats.IsDead()) {return;}
         if (!other.CompareTag("Player")) {return;}
         
         Vector3 toPlayer = other.transform.position - transform.position;

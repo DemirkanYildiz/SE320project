@@ -11,6 +11,7 @@ public class Stats : MonoBehaviour
     [SerializeField] private float attackDamage = 1;
     [SerializeField] private string visualName;
     private Animator animator;
+    private bool isDead = false;
 
     
     public event Action<float, float> OnHealthChanged;
@@ -35,6 +36,7 @@ public class Stats : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        if (isDead) return;
         float percentageDamageReduction = armor / (armor + 50);
         float damage = amount * (1-percentageDamageReduction);
         hp -= damage;
@@ -51,13 +53,19 @@ public class Stats : MonoBehaviour
 
     public void Die()
     {
-        if (animator != null) animator.SetBool("die", true);
+        if (animator != null) animator.SetTrigger("die");
+        isDead = true;
     }
     
     public float getAttackDamage() { return attackDamage; }
     public float getMaxHp() { return maxHp; }
     public float getArmor() { return armor; }
     public float getCooldownReduction() { return cooldownReduction; }
+
+    public bool IsDead()
+    {
+        return isDead;
+    }
     
     public void setAttackDamage(float ad) { this.attackDamage = ad; }
     public void setMaxHp(float maxHp) { this.maxHp = maxHp; }

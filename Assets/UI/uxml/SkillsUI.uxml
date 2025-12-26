@@ -1,0 +1,17 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/uxml/SkillsStyle.uss?fileID=7433441132597879392&amp;guid=9bb8c19281703e54b8cf3fd981ae666b&amp;type=3#SkillsStyle" />
+    <ui:VisualElement name="skills" class="skills" style="flex-grow: 1; top: 30%; background-color: rgb(37, 37, 37);">
+        <ui:VisualElement name="RMB" class="skill" style="background-image: url(&quot;project://database/Assets/UI/uxml/test.png?fileID=2800000&amp;guid=c1fcb374ab8aae247b51cd26301a42a0&amp;type=3#test&quot;); margin-top: 5px;">
+            <ui:Label name="cooldown" class="cooldown" />
+            <ui:Label text="RMB" name="name" class="name" />
+        </ui:VisualElement>
+        <ui:VisualElement name="E" class="skill" style="background-image: url(&quot;project://database/Assets/UI/uxml/test.png?fileID=2800000&amp;guid=c1fcb374ab8aae247b51cd26301a42a0&amp;type=3#test&quot;);">
+            <ui:Label name="cooldown" class="cooldown" />
+            <ui:Label text="E" name="name" class="name" />
+        </ui:VisualElement>
+        <ui:VisualElement name="LMB" class="skill" style="background-image: url(&quot;project://database/Assets/UI/uxml/test.png?fileID=2800000&amp;guid=c1fcb374ab8aae247b51cd26301a42a0&amp;type=3#test&quot;);">
+            <ui:Label name="cooldown" class="cooldown" />
+            <ui:Label text="LMB" name="name" class="name" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

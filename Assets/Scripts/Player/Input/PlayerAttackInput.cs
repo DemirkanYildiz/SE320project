@@ -39,6 +39,7 @@ public class PlayerAttackInput : MonoBehaviour
         if(basicAttack.isReady())
         {
             animator.SetTrigger("basicAttack");
+            basicAttack.setCooldown();
         }
     }
 
@@ -47,6 +48,7 @@ public class PlayerAttackInput : MonoBehaviour
         if (heavyAttack.isReady())
         {
             animator.SetTrigger("heavyAttack");
+            heavyAttack.setCooldown();
         }
     }
 

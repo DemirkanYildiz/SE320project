@@ -35,7 +35,6 @@ public class AnimationEventListener : MonoBehaviour
 
     public void DestroyObject()
     {
-        Debug.Log("OnDestroy");
         Destroy(destroy);
     }
 
