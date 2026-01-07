@@ -1,20 +1,22 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Toolkit/MainMenu_Styles.uss?fileID=7433441132597879392&amp;guid=8796fa31f261c9e428859a21167810a5&amp;type=3" />
+    <Style src="project://database/Assets/Ui/styles/MainMenu_Styles.uss?fileID=7433441132597879392&amp;guid=8796fa31f261c9e428859a21167810a5&amp;type=3#MainMenu_Styles" />
     <ui:VisualElement name="main-container" class="main-container" style="flex-grow: 1;">
-        <ui:VisualElement name="main-menu-panel" class="main-menu-panel" style="flex-grow: 1;">
+        <ui:VisualElement name="main-menu-panel" class="main-menu-panel" style="flex-grow: 1; display: flex; width: 782px;">
             <ui:Label text="Lord Of The Dungeons" name="title-label" />
             <ui:Button text="Play" name="play-button" />
             <ui:Button text="Options" name="options-button" />
             <ui:Button text="Exit" name="exit-button" />
         </ui:VisualElement>
-        <ui:VisualElement name="options-panel" class="options-panel" style="flex-grow: 1;">
+        <ui:VisualElement name="options-panel" class="options-panel" style="flex-grow: 1; display: none; width: 776px;">
             <ui:Label text="Options" name="options-title" />
             <ui:VisualElement name="options-content-container" style="flex-grow: 1;">
-                <ui:VisualElement name="controls-box" style="flex-grow: 1;">
+                <ui:VisualElement name="controls-box" style="flex-grow: 1; align-items: center; justify-content: flex-start; padding-right: 12px; margin-right: 0; padding-left: 8px;">
                     <ui:Label text="Controls" name="controls-label" />
+                    <ui:Label text="Movement: W, A, S, D&#10;&#10;Jump: Space&#10;&#10;Sprint: Left Shift&#10;&#10;Throw Knife: F&#10;&#10;Inventory: I&#10;&#10;Attack: Left Click&#10;&#10;Heavy Attack: Right Click" name="controls" style="color: rgb(255, 255, 255); -unity-font-style: bold; font-size: 16px;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="description-box" style="flex-grow: 1;">
-                    <ui:Label text="Description" name="description-label" />
+                <ui:VisualElement name="description-box" style="flex-grow: 1; align-items: center;">
+                    <ui:Label text="Credits&#10;" name="description-label" />
+                    <ui:Label text="Created &amp; Developed by:&#10;&#10;Demirkan Yıldız&#10;Emin Buğra Aksoy&#10;&#10;Game Design:&#10;&#10;Emin Buğra Aksoy&#10;Demirkan Yıldız&#10;&#10;Enjoy the game!" name="descriptions" style="height: 248px; width: 215px; color: rgb(255, 255, 255); font-size: 16px; -unity-font-style: bold; display: flex;" />
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:Button text="Back" name="options-back-button" />
