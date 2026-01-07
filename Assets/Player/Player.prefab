@@ -257,7 +257,7 @@ MonoBehaviour:
   armor: 0
   cooldownReduction: 1
   attackDamage: 10
-  visualName: PlayerVisuals
+  animator: {fileID: 944925054041843022}
 --- !u!114 &3996428384791562462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   rangedAttackInput: {fileID: -8018610571631298016, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
   knifePrefab: {fileID: 1193681974153268068, guid: 8ee648042a9ee5e4b9c66e1a01ec2ea7, type: 3}
   knifeSpawnPoint: {fileID: 580836008767293000}
+  maxKnifeCount: 5
 --- !u!114 &540314968043705449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2370,6 +2371,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroy: {fileID: 1133970092815061224}
+--- !u!95 &944925054041843022 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4957605393579145647, guid: 4f46098734d87e24490aef9267915ad2, type: 3}
+  m_PrefabInstance: {fileID: 5319313570010209505}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &944925054041843023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4957605393579145646, guid: 4f46098734d87e24490aef9267915ad2, type: 3}

@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-//dungeon finishing logic should be here.
 public class DungeonHandler : MonoBehaviour
 {
 

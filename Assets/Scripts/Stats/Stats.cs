@@ -9,8 +9,7 @@ public class Stats : MonoBehaviour
     [SerializeField] private float armor = 0;
     [SerializeField] private float cooldownReduction = 1;
     [SerializeField] private float attackDamage = 1;
-    [SerializeField] private string visualName;
-    private Animator animator;
+    [SerializeField] private Animator animator;
     private bool isDead = false;
 
     
@@ -19,13 +18,12 @@ public class Stats : MonoBehaviour
     private void Awake()
     {
         hp = maxHp;
-        
-        if (!string.IsNullOrEmpty(visualName))
+        /*if (!string.IsNullOrEmpty(visualName))
         {
             Transform visualTransform = transform.Find(visualName);
             if (visualTransform != null)
                 animator = visualTransform.GetComponent<Animator>();
-        }
+        }*/
     }
 
     

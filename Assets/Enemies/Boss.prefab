@@ -106,8 +106,7 @@ MonoBehaviour:
   armor: 10
   cooldownReduction: 2
   attackDamage: 10
-  visualName: EnemyVisuals
-  isDead: 0
+  animator: {fileID: 2632734994528068483}
 --- !u!143 &3673145300833867273
 CharacterController:
   m_ObjectHideFlags: 0
