@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8208235498041189126}
   - component: {fileID: 2031557995502833845}
   - component: {fileID: 6075082045261807554}
+  - component: {fileID: 8471827968669735786}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -336,6 +337,23 @@ MonoBehaviour:
   playerHeal: {fileID: 5208816965726845013, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
   cooldown: 20
   skillsUI: {fileID: 2553440140068508247}
+--- !u!114 &8471827968669735786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133970092815061224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3c2bd910496f684196c2afec501827f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerStats: {fileID: 172278563887946477}
+  attackDamageMultiplier: 1.1
+  cooldown: 60
+  skillsUI: {fileID: 2553440140068508247}
+  playerBuff: {fileID: 7683045871113755146, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
 --- !u!1 &1278502330169286820
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +643,7 @@ MonoBehaviour:
   cooldown: 1
   attackField: {fileID: 5752119402481537728}
   skillsUI: {fileID: 2553440140068508247}
+  playerBuffInput: {fileID: 8471827968669735786}
 --- !u!1 &2473690805414331176
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +869,7 @@ MonoBehaviour:
   cooldown: 5
   attackField: {fileID: 1336536896359585992}
   skillsUI: {fileID: 2553440140068508247}
+  playerBuffInput: {fileID: 8471827968669735786}
 --- !u!1 &4415458223745528935
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,14 +1,22 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+//player e skill.
 public class PlayerHealInput : MonoBehaviour
 {
     [SerializeField] private Stats playerStats;
     [SerializeField] private InputActionReference playerHeal;
     [SerializeField] private float cooldown = 20;
     [SerializeField] private SkillsUI skillsUI;
+    [SerializeField] private int usage = 5;
     private int prevFloatingDigit = -1;
-    
+
+    public void Start()
+    {
+        skillsUI.updateUsageE(usage.ToString());
+    }
+
     public void Update()
     {
         if (cooldown > 0)
@@ -49,13 +57,15 @@ public class PlayerHealInput : MonoBehaviour
 
     private void healPlayer(InputAction.CallbackContext obj)
     {
-        if (cooldown <= 0)
+        if (cooldown <= 0 && usage > 0)
         {
             float healthGap = playerStats.getMaxHp() - playerStats.getHp();
             if (healthGap <= 0) return;
             if (healthGap <= 10) playerStats.setHp(playerStats.getHp() + healthGap);
             else playerStats.setHp(playerStats.getHp() + 10);
             cooldown = 20;
+            usage--;
+            skillsUI.updateUsageE(usage.ToString());
         }
     }
     

@@ -78,7 +78,7 @@ public class Score : MonoBehaviour
         if (score >= 2)
         {
             score-=2;
-            playerStats.setCooldownReduction(playerStats.getCooldownReduction()+1);
+            playerStats.setCooldownReduction(playerStats.getCooldownReduction()+0.2f);
             statsVisual.refresh();
         }
     }
@@ -88,7 +88,7 @@ public class Score : MonoBehaviour
         if (score >= 4)
         {
             score-=4;
-            playerStats.setAttackDamage(playerStats.getAttackDamage()+10);
+            playerStats.setAttackDamage(playerStats.getAttackDamage()+5);
             statsVisual.refresh();
         }
     }

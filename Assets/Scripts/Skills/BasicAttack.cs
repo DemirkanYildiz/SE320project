@@ -5,9 +5,18 @@ using UnityEngine;
 public class BasicAttack : Attack
 {
 
+    [SerializeField] private PlayerBuffInput playerBuffInput; 
+    
     public override void Apply(Stats enemyStats)
-    {      
-        enemyStats.TakeDamage(this.stats.getAttackDamage());
+    {
+        if (playerBuffInput != null)
+        {
+            enemyStats.TakeDamage(stats.getAttackDamage() * playerBuffInput.GetMultiplier());
+        }
+        else
+        {
+            enemyStats.TakeDamage(stats.getAttackDamage());
+        }
     }
 
     protected override void UpdateUI()
